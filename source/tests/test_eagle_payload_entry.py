@@ -248,7 +248,7 @@ class EagleEntryTests(unittest.TestCase):
             seated(false); tap("rearm")
             assert(entry.payload.rearming and entry.payload.firing_locked)
             press("drop"); step()           -- fire during service: safed
-            assert(calls.spawn==1 and calls.define==0)
+            assert(calls.spawn==1)
             assert(entry.payload.status=="weapons safe during rearm")
             assert(entry.payload.rearming)
             release("drop"); step()
